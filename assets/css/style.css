@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+  }
+
+.password {
+    padding: 10px 10px 150px;
+    border: grey 2px dashed;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    
+}
+
+.main-container {
+    background-color: white;
+    box-shadow: 5px 4px 2px grey;
+    border-radius: 10px;
+}
+
+body {
+    background-color: #ececee;
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+margin-left: 25%;
+margin-bottom: 5%;
+width: 50%;
+border-radius: 10px;
+box-shadow: 5px 4px 2px grey;
+}
+
+p {
+    font-size: 18px;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+.genPass {
+    background-color: turquoise;
+}
+
+.copy {
+    background-color: #ececec;
+}
