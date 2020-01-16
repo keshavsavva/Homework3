@@ -75,14 +75,16 @@ function randArr() {
     return multiChar;
 
 } // creates an array that has one of each confirmed character type
-
 console.log(randArr());
+var pwd = document.getElementById("password");
+var refresh = document.querySelector(".genPass");
+var copy = document.querySelector(".copy");
 
 var password = "";
 
  if(!confUppr && !confLwr && !confNum && !confSpec) {
     alert("You must pick at least one type of character!");
-    document.getElementById("password").textContent = "You must pick at least one type of character to generate a password!";
+   pwd.textContent = "You must pick at least one type of character to generate a password!";
     } else {
         for(var i = 0; i < passLength; i++) {
         
@@ -90,7 +92,31 @@ var password = "";
             console.log(char);
             password = password + char;
         }
-        document.getElementById("password").textContent = password;
+        pwd.textContent = password;
     }
 console.log(password);
 
+function reload(event) {
+    event.preventDefault();
+    window.location.reload();
+} //reload event
+
+refresh.addEventListener("click", reload);
+
+
+function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("password");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+  
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
+  
+  copy.addEventListener("click", myFunction);
