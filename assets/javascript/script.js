@@ -1,8 +1,8 @@
 var passLength = prompt("How many chartacters would you like your generated password to be?");
 var confSpec = confirm("Would you like to include special characters in your generated password?");
-var confNum = confirm("Would you like to include special characters in your generated password?");
-var confUppr = confirm("Would you like to include special characters in your generated password?");
-var confLwr = confirm("Would you like to include special characters in your generated password?");
+var confNum = confirm("Would you like to include Numbers in your generated password?");
+var confUppr = confirm("Would you like to include upper case characters in your generated password?");
+var confLwr = confirm("Would you like to include lower case characters in your generated password?");
 
 var truths = [confSpec, confNum, confUppr, confLwr];
 
@@ -80,12 +80,17 @@ console.log(randArr());
 
 var password = "";
 
-for(var i = 0; i < passLength; i++) {
-    var char = randArr()[Math.floor(Math.random() * options)]
-    console.log(char);
-    password = password + char;
-}
-
+ if(!confUppr && !confLwr && !confNum && !confSpec) {
+    alert("You must pick at least one type of character!");
+    document.getElementById("password").textContent = "You must pick at least one type of character to generate a password!";
+    } else {
+        for(var i = 0; i < passLength; i++) {
+        
+            var char = randArr()[Math.floor(Math.random() * options)]
+            console.log(char);
+            password = password + char;
+        }
+        document.getElementById("password").textContent = password;
+    }
 console.log(password);
 
-document.getElementById("password").textContent = password;
