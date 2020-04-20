@@ -28,6 +28,12 @@ body {
     text-align: center;
 }
 
+#submit {
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 5px 4px 2px grey;
+}
+
 button {
 margin-left: 25%;
 margin-bottom: 5%;

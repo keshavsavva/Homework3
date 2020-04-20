@@ -16,6 +16,19 @@
                     <h1>Password Generator</h1>
                 </div>
             </div>
+            <form id="passForm">
+                <label for="passLength"> Number of Characters:</label><br>
+                <input type="number" id="passLength" name="passLength"><br><br>
+                <input type="checkbox" id="confSpec" name="confSpec" value="spec">
+                <label for="confSpec"> Special Characters</label><br>
+                <input type="checkbox" id="confUppr" name="confUppr" value="uppr">
+                <label for="confUppr"> UpperCase Letters</label><br>
+                <input type="checkbox" id="confLwr" name="confLwr" value="lwr">
+                <label for="confLwr"> LowerCase Letters</label><br>
+                <input type="checkbox" id="confNum" name="confNum" value="num">
+                <label for="confNum"> Numbers</label><br><br>
+                <input type="submit" id="submit" value="Generate Password">
+            </form><br>
             <div class="container main-container container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -36,7 +49,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <button class="genPass">Generate Password</button>
+                        <button class="genPass">Refresh</button>
                     </div>
                     <div class="col-md-6">
                         <button class="copy">Copy to Clipoard</button>
